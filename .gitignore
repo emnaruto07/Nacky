@@ -1,0 +1,48 @@
+# Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+myenv/
+*.venv/
+.env
+
+# Distribution packages
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Logs
+*.log
+
+# Cache
+*.cache/
+.cache
+.cache/
+
+# Jupyter notebook
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Spyder settings
+.spyderproject
+.spyproject
+
+# macOS files
+.DS_Store
+
+# Custom
+# Add any project-specific files or directories that you don't want to track
