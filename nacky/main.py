@@ -20,19 +20,19 @@ import argparse
 from nacky import initial_setup, connection_setup
 from nacky import VERSION
 
-def usage():
-    print(f"{sys.argv[0]} v{VERSION} usage:")
-    print("    -1 <eth>    network interface plugged into switch")
-    print("    -2 <eth>    network interface plugged into victim machine")
-    print("    -a          autonomous mode")
-    print("    -c          start connection setup only")
-    print("    -g <MAC>    set gateway MAC address (GWMAC) manually")
-    print("    -h          display this help")
-    print("    -i          start initial setup only")
-    print("    -r          reset all settings")
-    print("    -R          enable port redirection for Responder")
-    print("    -S          enable port redirection for OpenSSH and start the service")
-    sys.exit(0)
+# def usage():
+#     print(f"{sys.argv[0]} v{VERSION} usage:")
+#     print("    -1 <eth>    network interface plugged into switch")
+#     print("    -2 <eth>    network interface plugged into victim machine")
+#     print("    -a          autonomous mode")
+#     print("    -c          start connection setup only")
+#     print("    -g <MAC>    set gateway MAC address (GWMAC) manually")
+#     print("    -h          display this help")
+#     print("    -i          start initial setup only")
+#     print("    -r          reset all settings")
+#     print("    -R          enable port redirection for Responder")
+#     print("    -S          enable port redirection for OpenSSH and start the service")
+#     sys.exit(0)
 
 def version():
     print(f"{sys.argv[0]} v{VERSION}")
@@ -52,13 +52,15 @@ def check_params():
     parser.add_argument("-S", dest="ssh", action="store_true", help="enable port redirection for OpenSSH and start the service")
 
     args = parser.parse_args()
+    # args = parser.print_help()
 
-    if args.show_help:
-        usage()
+    # if args.show_help:
+    #     usage()
 
     return args
 
 if __name__ == "__main__":
     args = check_params()
-    initial_setup()
-    connection_setup()
+    print(args)
+    # initial_setup()
+    # connection_setup()
