@@ -4,7 +4,7 @@
 # Python version
 # -----
 # Updated Script:
-# Name: nacky
+# Name: NACKY
 # Shazeb - Nacky v1.0
 # -----
 # Name: nac_bypass_setup.sh
