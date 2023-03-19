@@ -33,6 +33,7 @@ from nacky import VERSION
 #     print("    -R          enable port redirection for Responder")
 #     print("    -S          enable port redirection for OpenSSH and start the service")
 #     sys.exit(0)
+#
 
 def version():
     print(f"{sys.argv[0]} v{VERSION}")
