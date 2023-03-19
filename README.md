@@ -1,6 +1,6 @@
 
 <h1 align="center">
-NACKY<p>v1.0</p>
+NACKY
 </h1>
 
 ## Bypass Network Access Control (NAC, 802.1x)
