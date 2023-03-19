@@ -1,4 +1,19 @@
 #!/usr/bin/env python3
+
+# Python version
+# -----
+# Updated Script:
+# Name: nacky
+# Shazeb - Nacky v1.0
+# -----
+# Name: nac_bypass_setup.sh
+# scip AG - Michael Schneider
+# -----
+# Original Script:
+# Matt E - NACkered v2.92.2 - KPMG LLP 2014
+# KPMG UK Cyber Defence Services
+# -----
+
 import sys
 import os
 import subprocess
