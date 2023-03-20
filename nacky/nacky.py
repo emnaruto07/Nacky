@@ -241,7 +241,9 @@ def connection_setup(option_autonomous, option_ssh, option_responder):
         if OPTION_AUTONOMOUS == 0:
             print("\n[ * ] Time for fun & profit")
 
-def reset():
+    return GWMAC
+
+def reset(GWMAC):
     if OPTION_AUTONOMOUS == 0:
         print("\n[ * ] Resetting all settings")
 
