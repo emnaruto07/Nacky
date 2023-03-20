@@ -17,7 +17,8 @@
 
 import sys
 import argparse
-from nacky import initial_setup, connection_setup, reset, VERSION
+from nacky import initial_setup, connection_setup, reset
+from check_dependencies import check_dependencies
 
 def check_params():
     parser = argparse.ArgumentParser(description="NAC bypass script")
@@ -30,12 +31,22 @@ def check_params():
     parser.add_argument("-r", dest="reset", action="store_true", help="reset all settings")
     parser.add_argument("-R", dest="responder", action="store_true", help="enable port redirection for Responder")
     parser.add_argument("-S", dest="ssh", action="store_true", help="enable port redirection for OpenSSH and start the service")
+    parser.add_argument("-d", "--check-dependencies", action="store_true", help="Check if all required tools are installed")
 
     args = parser.parse_args()
     return args
 
 def main():
     args = check_params()
+    
+    if args.check_dependencies:
+        if not check_dependencies():
+            print("Please install the missing tools and try again.")
+            return
+        else:
+            print("All required tools are installed.")
+            return
+    
     
     if args.reset:
         reset()
