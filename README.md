@@ -29,7 +29,7 @@ For arptables, iptables, and ebtables, make sure not to use Netfilter xtable too
 6. Analyze the network traffic passing through the bridge to capture Kerberos and SMB packets. This information is used to automatically configure the client side of the bridge.
 7. If port forwarding has been enabled for SSH and Responder, the bridge forwards all requests for the respective ports to the attacker's services.
 Responder
-8. Run Responder on the bridge interface with the correct IP address for poisoning multicast using the -e parameter:
+8. Run Responder on the bridge interface with the correct IP address for poisoning multicast using the `-e` parameter:
 
 ```
 ./Responder.py -I <bridge_interface> -e <client_address> ...
