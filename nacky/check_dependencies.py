@@ -20,8 +20,19 @@ import subprocess
 
 def check_tool(tool):
     try:
-        subprocess.run([tool, "--version"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        return True
+        if tool == "bridge-utils":
+            result = subprocess.run(["ip", "add"],stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            return result.returncode == 0
+
+        elif tool == "net-tools":
+            result = subprocess.run(["ifconfig"],stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            return result.returncode == 0
+        
+        else:
+            result =  subprocess.run([tool, "--version"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            return result.returncode == 0
+
+
     except FileNotFoundError:
         return False
 
